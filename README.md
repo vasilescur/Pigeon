@@ -6,6 +6,8 @@
   A hyper-local, real-time, collaborative platform for citizen journalism.
 </p>
 
+<br/><br/>
+
 Work-in-progress, more coming soon!
 
 ## Usage
