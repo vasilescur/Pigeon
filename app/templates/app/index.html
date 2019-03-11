@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="content">
+    <div class="row">
+        <div class="main">
+            <h1>My Newsfeed</h1>
+
+            <h2>Featured</h2>
+            <div id="featured">
+                <table>
+                    <tr>
+                        {% for article in featured %}
+                            <td>
+                                <div class="story-card">
+                                    {% if article.feature_image %}
+                                        <div class="feature-image-container-no-float">
+                                            <img class="feature-image" src="{{ article.feature_image.url }}">
+                                        </div>
+                                    {% endif %}
+                                    <br/>
+                                    <h3 class="headline">
+                                        {{ article.headline }}
+                                    </h3>
+                                    <div class="card-body">
+                                        {{ article.card_desc }}
+                                    </div>
+                                </div>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Local Articles</h2>
+            <div id="newsfeed">
+                {% for article in articles %}
+                    <div class="story-slice clearfix">
+
+                        <table>
+                            <tr>
+                                {% if article.feature_image %}
+                                    <td>
+                                        <div class="feature-image-container">
+                                            <img class="feature-image" src="{{ article.feature_image.url }}">
+                                        </div>
+                                    </td>
+                                {% endif %}
+                                
+                                <td>
+                                    <div class="story-slice-content-container">
+                                        <h3 class="headline">
+                                            {{ article.headline }}
+                                        </h3>
+                                        <div class="card-body">
+                                            {{ article.card_desc }}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

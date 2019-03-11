@@ -1,0 +1,38 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pigeon</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+    <body>
+        <header>
+            <div id="header-content">
+                <img id="header-logo" src="{% static 'logo.png'%}">
+
+                <div class="header-links">
+                    <a class="header-link header-active">
+                        Home
+                    </a>
+    
+                    <a class="header-link">
+                        Locations
+                    </a>
+    
+                    <a class="header-link">
+                        About
+                    </a>
+    
+                    <a class="header-link">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        {% block content %}{% endblock content %}
+    </body>
+</html>
