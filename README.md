@@ -1,4 +1,4 @@
-# Pigeon
+![1bfef19b-680f-4e58-9243-30c0d1fecdb5](https://user-images.githubusercontent.com/10100323/54144603-6f555f00-4402-11e9-9422-13f36e4f6cf8.png)
 
 A hyper-local, real-time, collaborative platform for citizen journalism.
 
