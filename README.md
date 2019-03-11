@@ -1,4 +1,4 @@
-# OpenNews
+# Pigeon
 
 A hyper-local, real-time, collaborative platform for citizen journalism.
 
