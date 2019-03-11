@@ -142,16 +142,19 @@ header {
 
 .feature-image-container {
     text-align: center;
-    float: left;
 }
 
 .feature-image-container-no-float {
     text-align: center;
     padding-top: 20px;
+    min-height: 200px;
 }
 
 .feature-image {
     height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Story slices */
