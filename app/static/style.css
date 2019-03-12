@@ -20,8 +20,23 @@ a {
 }
 
 body {
-    margin-top: 80px;
+    padding-top: 80px;
     background-color: #fafafa;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.footer, .body-push {
+    height: 50px;
 }
 
 /* Clearfix */
@@ -83,6 +98,21 @@ header {
     float: right;
 }
 
+/* Footer */
+
+.footer {
+    text-align: center;
+    background-color: #282828;
+    overflow: hidden;
+    width: 100%;
+}
+
+.footer-content {
+    color: #cccccc;
+    margin-top: 12px;
+
+}
+
 /* Home page */
 
 .elev-card {
@@ -95,18 +125,19 @@ header {
 .content {
     width: 80%;
     left: 10%;
-    position: absolute;
+    position: relative;
 }
 
 .row {
     width: 100%;
-    display: inline;
+    display: auto;
 }
 
 .main {
     padding: 20px;
     width: 100%;
     float: left;
+    margin-bottom: 100px;
 }
 
 #featured {
