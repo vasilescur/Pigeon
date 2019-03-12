@@ -85,6 +85,13 @@ header {
 
 /* Home page */
 
+.elev-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: #cccccc 0px 0px 10px;
+    padding: 20px;
+}
+
 .content {
     width: 80%;
     left: 10%;
@@ -122,8 +129,6 @@ header {
 
 .story-card {
     width: 300px;
-    box-shadow: #cccccc 0px 0px 10px;
-    padding: 20px;
     padding-top: 1px;
     margin-bottom: 15px;
     top: 0;
@@ -161,9 +166,9 @@ header {
 
 .story-slice {
     width: 70%;
-    box-shadow: #cccccc 0px 0px 10px;
-    padding: 10px;
+    padding-bottom: 15px;
     margin-bottom: 30px;
+    border-radius: 8px;
 }
 
 .story-slice .feature-image {
@@ -178,4 +183,43 @@ header {
 
 .story-slice-content-container {
     height: 100%;
+    padding-bottom: 10px;
+}
+
+/* Weather */
+
+.weather-row {
+    width: 60%;
+    text-align: left;
+    float: left;
+}
+
+/* Events */
+
+.happening-row {
+    width: 30%;
+    float: right;
+}
+
+.events-list {
+    border: 1px solid #cccccc;
+}
+
+.events-list td {
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.events-list tr:last-of-type td {
+    border: none;
+}
+
+.events-list table {
+    width: 100%;
+    border-radius: 8px;
+}
+
+div.event-time {
+    margin-top: 5px;
+    color: #888888;
 }
