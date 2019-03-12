@@ -19,6 +19,14 @@ a {
     text-decoration: none;
 }
 
+p, ol {
+    color: #444444;
+}
+
+ol > li {
+    margin-bottom: 10px;
+}
+
 body {
     padding-top: 80px;
     background-color: #fafafa;
@@ -75,11 +83,33 @@ header {
     color: #141414;
     height: 100%;
     width: 80%;
+
+    text-align: center;
 }
 
 .header-link {
     margin-top: 28px;
     color: rgb(63, 63, 63);
+}
+
+.header-button {
+    color: white;
+    background: #20BD67;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    margin-top: 24px;
+
+    border-radius: 16px;
+
+    box-shadow: #eeeeee 0px 0px 10px;
+    transition: 0.5s;
+}
+
+.header-button:hover {
+    box-shadow: #bbbbbb 0px 0px 10px;
 }
 
 #header-content a {
@@ -96,6 +126,12 @@ header {
 
 .header-links {
     float: right;
+}
+
+#location-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 78px;
 }
 
 /* Footer */
@@ -217,6 +253,29 @@ header {
     padding-bottom: 10px;
 }
 
+/* Buttons */
+
+.btn-primary {
+    background-color: #20BD67;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    box-shadow: #cccccc 0px 0px 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    box-shadow: #aaaaaa 0px 0px 10px;
+}
+
 /* Weather */
 
 .weather-row {
@@ -234,6 +293,7 @@ header {
 
 .events-list {
     border: 1px solid #cccccc;
+    margin-bottom: 15px;
 }
 
 .events-list td {
@@ -253,4 +313,104 @@ header {
 div.event-time {
     margin-top: 5px;
     color: #888888;
+}
+
+/* === Login Page === */
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+}
+
+.login-form {
+    width: 250px;
+    margin-left: 32%;
+    font-size: 18px;
+}
+
+.login-form td {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#login-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 0px;
+}
+
+.login-errors {
+    color: #e47256;
+}
+
+
+/* === Create Page === */
+
+.create-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#create-explanation {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+#see-drafts-btn {
+    margin-top: 10px;
+}
+
+.create-tools {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.create-headlines-card {
+    float: left;
+    width: 50%;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    height: 250px;
+}
+
+.contribute-drafts-card {
+    float: right;
+    width: 30%;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    
+    height: 250px;
+}
+
+.button-center-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.headline-input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    resize: none;
+    border: #dddddd solid 1px;
+
+    font-size: 24px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    font-stretch: expanded;
 }

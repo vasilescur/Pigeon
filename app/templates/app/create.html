@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="create-wrapper">
+    <h1>Create Dashboard</h1>
+
+    <div id="create-explanation">
+        <p>
+            Content creation on Pigeon is a multi-step process.</p>
+            
+        <ol>
+            <li>
+                First, members of the community add headlines to the <i>Headline Queue</i>.
+            </li>
+
+            <li>
+                Next, anyone can select a headline and begin an article draft. Multiple contributors 
+                can work on the same article draft at the same time, in a real-time collaborative editor.
+            </li>
+
+            <li>
+                Finally, the draft is submitted for <i>review</i> by a professional editor.
+            </li>
+        </ol>
+    </div>
+
+
+    <div class="create-tools">
+        <div class="create-headlines-card elev-card">
+            <h2>Create Headlines</h2>
+
+            <form action="/article/create/" method="POST">
+                {% csrf_token %}
+                <textarea id="headline" rows="4" cols="30" name="headline" type="text" class="headline-input"></textarea>
+                <br/>
+                <input type="submit" value="Submit" class="headline-submit"/>
+            </form>
+        </div>
+
+        <div class="contribute-drafts-card elev-card">
+            <h2>Contribute to Drafts</h2>
+
+            <p>Click here to see the list of drafts in-progress, and contribute to a draft or
+            start your own!</p><br/>
+
+            <div class="button-center-wrapper">
+                <a href="/drafts/" class="btn-primary" id="see-drafts-btn">See Drafts ></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

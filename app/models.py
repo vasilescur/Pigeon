@@ -18,6 +18,8 @@ def article_feature_img_path(instance, filename):
 
 
 class Article(models.Model):
+    is_published = models.BooleanField(default=False, null=False)
+
     headline = models.CharField(max_length=500, blank=False)
     tags = models.ManyToManyField(Tag)
     text = models.TextField(blank=True, null=True, editable=True)
@@ -34,7 +36,10 @@ class Article(models.Model):
 
     @property
     def card_desc(self):
-        return ' '.join(self.text.split(' ')[:25]) + '...'
+        if not self.text or self.text is '':
+            return '[Empty]'
+        else:
+            return ' '.join(self.text.split(' ')[:25]) + '...'
 
     class Meta:
         ordering = ('date_created',)

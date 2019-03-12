@@ -12,24 +12,38 @@
         <div class="body-wrapper clearfix">
             <header>
                 <div id="header-content">
-                    <img id="header-logo" src="{% static 'logo.png'%}">
+                    <a href="/">
+                        <img id="header-logo" src="{% static 'logo.png'%}">
+                    </a>
+
+                    <span id="location-title">Durham, NC</span>
 
                     <div class="header-links">
-                        <a class="header-link header-active">
+                        <a class="header-link header-active" href="/">
                             Home
                         </a>
         
-                        <a class="header-link">
+                        <a class="header-link" href="#">
                             Locations
                         </a>
         
-                        <a class="header-link">
+                        <a class="header-link" href="#">
                             About
                         </a>
         
-                        <a class="header-link">
-                            Login
-                        </a>
+                        {% if user.is_authenticated %}
+                            <a class="header-link" href="accounts/logout/">
+                                Logout
+                            </a>
+
+                            <a class="header-link header-button" href="create/">
+                                Create
+                            </a>
+                        {% else %}
+                            <a class="header-link" href="accounts/login/">
+                                Login
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </header>
