@@ -9,30 +9,40 @@
     </head>
 
     <body>
-        <header>
-            <div id="header-content">
-                <img id="header-logo" src="{% static 'logo.png'%}">
+        <div class="body-wrapper clearfix">
+            <header>
+                <div id="header-content">
+                    <img id="header-logo" src="{% static 'logo.png'%}">
 
-                <div class="header-links">
-                    <a class="header-link header-active">
-                        Home
-                    </a>
-    
-                    <a class="header-link">
-                        Locations
-                    </a>
-    
-                    <a class="header-link">
-                        About
-                    </a>
-    
-                    <a class="header-link">
-                        Login
-                    </a>
+                    <div class="header-links">
+                        <a class="header-link header-active">
+                            Home
+                        </a>
+        
+                        <a class="header-link">
+                            Locations
+                        </a>
+        
+                        <a class="header-link">
+                            About
+                        </a>
+        
+                        <a class="header-link">
+                            Login
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        {% block content %}{% endblock content %}
+            {% block content %}{% endblock content %}
+
+            <div class="body-push"></div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                Site Created by <a href="https://raduvasilescu.com">Radu Vasilescu</a>, 2019.
+            </div>
+        </div>
     </body>
 </html>
