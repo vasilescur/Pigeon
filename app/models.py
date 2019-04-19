@@ -19,6 +19,7 @@ def article_feature_img_path(instance, filename):
 
 class Article(models.Model):
     is_published = models.BooleanField(default=False, null=False)
+    is_draft = models.BooleanField(default=False, null=False)
 
     headline = models.CharField(max_length=500, blank=False)
     tags = models.ManyToManyField(Tag)

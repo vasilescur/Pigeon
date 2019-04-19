@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<div class="edit-wrapper">
+    <div class="elev-card">
+        <h2>Edit Article</h2>
+
+        <h3>{{ article.headline }}</h3>
+
+        <textarea id="article-text"></textarea>
+
+        <button class="btn-primary" onclick="save({{ article.id }})">
+            Save Changes
+        </button>
+
+        <script>
+            var simplemde = new SimpleMDE({
+                autofocus: true,
+                hideIcons: ['side-by-side', 'fullscreen'],
+                forceSync: true    // Changes made here are immediately applied to textarea
+            });
+
+            simplemde.value(`{{ article.text }}`);
+
+        </script>
+
+        <script>
+            function save(id) {
+                let newText = document.getElementById('article-text').value;
+
+                // Build the URL
+                let url = "/article/newtext/"
+                
+                // Send the new data to the server
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                    id: {{ article.id }},
+                    newtext: newText
+                }));
+            }
+        </script>
+    </div>
+</div>
+
+{% endblock %}

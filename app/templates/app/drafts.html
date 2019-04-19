@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="drafts-wrapper">
+    <div class="elev-card">
+        <h2>Drafts</h2>
+
+        <table id="drafts-table">
+            <tr id="drafts-header">
+                <td>Headline</td>
+                <td>Tags</td>
+                <td>Creator</td>
+                <td>Date Created</td>
+                <td>Actions</td>
+            </tr>
+
+            {% for draft in drafts %}
+
+                <tr>
+                    <td>{{ draft.headline }}</td>
+                    <td>
+                        {% for tag in draft.tags.all %}
+                            <span class="tag-name">{{ tag }}</span>
+                        {% endfor %}
+                    </td>
+                    <td>{{ draft.creator }}</td>
+                    <td>{{ draft.date_created }}</td>
+
+                    <td>
+                        <!-- Edit Button -->
+                        <button class="btn-primary" onclick="editArticle({{ draft.id }})">
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+
+        <script>
+        
+            function editArticle(id) {
+                let target = "/edit/?id=" + id;
+                window.location.href = target;
+            }            
+        
+        </script>
+    </div>
+</div>
+
+{% endblock %}

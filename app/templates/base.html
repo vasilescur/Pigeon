@@ -32,15 +32,15 @@
                         </a>
         
                         {% if user.is_authenticated %}
-                            <a class="header-link" href="accounts/logout/">
+                            <a class="header-link" href="/accounts/logout/">
                                 Logout
                             </a>
 
-                            <a class="header-link header-button" href="create/">
+                            <a class="header-link header-button" href="/create/">
                                 Create
                             </a>
                         {% else %}
-                            <a class="header-link" href="accounts/login/">
+                            <a class="header-link" href="/accounts/login/">
                                 Login
                             </a>
                         {% endif %}

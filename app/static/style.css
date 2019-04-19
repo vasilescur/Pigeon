@@ -414,3 +414,53 @@ div.event-time {
     font-variant-caps: small-caps;
     font-stretch: expanded;
 }
+
+
+/* === Drafts Page === */
+
+.drafts-wrapper {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+#drafts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#drafts-header {
+    font-weight: bold;
+}
+
+#drafts-table tr {
+    height: 50px;
+}
+
+#drafts-table td {
+    padding-left: 5px;
+}
+
+#drafts-table, #drafts-table th, #drafts-table td {
+    border: 1px solid #bbbbbb;
+}
+
+.tag-name {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    background-color: #dddddd;
+    border-radius: 8px;
+}
+
+
+/* === Edit Page === */
+
+.edit-wrapper {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+

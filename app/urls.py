@@ -12,4 +12,11 @@ urlpatterns = [
 
     path('create/', views.create, name='create'),
     path('article/create/', views.create_article, name='create_article'),
+
+    path('drafts/', views.drafts, name='drafts'),
+
+    path('edit/', views.edit, name='edit'),
+    path('article/', views.article, name='article'),
+
+    path('article/newtext/', views.article_newtext, name='article_newtext'),
 ]

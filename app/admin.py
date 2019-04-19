@@ -25,7 +25,7 @@ make_featured.short_description = 'Mark selected articles as not featured'
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['headline', 'creator', 'is_published', 'is_featured']
+    list_display = ['headline', 'creator', 'is_draft', 'is_published', 'is_featured']
     actions = [make_published, make_not_published, make_featured, make_not_featured]
 
 
