@@ -27,7 +27,7 @@ Browse to `localhost:8000`.
 
 ### License
 
-As of now, this is Copyright (c) 2019 Radu Vasilescu.
+As of now, this project is available under the MIT License. See `LICENSE` file for details.
 
 
 # Motivation, Background, and Written Report
